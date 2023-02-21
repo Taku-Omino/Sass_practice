@@ -1,0 +1,65 @@
+.c-sectionLine {
+  height: 1px;
+  background-color: rgb(47, 47, 47);
+  border: none;
+
+  @include mq(pc) {
+    margin: 10px 30px 20px 30px;
+  }
+
+  @include mq(sp) {
+    margin: 30px 0;
+
+  }
+}
+
+//ブレイクポイントを@include mq(pc_375px)を_var.scssに作ってみる
+
+//c-column
+.c-column{
+  font-size: 15px;
+  color: black;
+  @include mq(pc) {
+    //.p-columnBold
+    &__Bold{
+      //text-decoration-thickness: 3px; is not working
+      border-bottom:6px;
+      vertical-align: middle;
+      text-decoration: underline black solid;
+      text-underline-position: under;
+    }
+    //.p-columnNormal 
+    &__Normal{
+      //text-decoration-thickness: 2px; is not working
+      border-bottom:3px;
+      vertical-align: middle;
+      text-decoration: underline black solid;
+      text-underline-position: under;
+    }
+    //.p-columnLight
+    &__Light{ 
+      //text-decoration-thickness: 1px; is not working
+      border-bottom:1px;
+      vertical-align: middle;
+      text-decoration: underline black solid;
+      text-underline-position: under;
+    }
+  }
+
+  @include mq(sp_375px) {
+    padding-top: 20px;
+  }
+}
+
+//.c-text
+
+//.p-text
+.c-text{
+  vertical-align: middle;
+  padding-top: 15px;
+  font-size: 15px;
+  color: black;
+  @include mq(sp) {
+    padding-top: 10px;
+  }
+}

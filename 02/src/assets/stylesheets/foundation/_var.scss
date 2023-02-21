@@ -1,0 +1,14 @@
+// breakpointの設定
+$breakpoints: (
+  "pc": "screen and (min-width: 796px)",
+  "sp": "screen and (max-width: 795px)",
+  "sp_375px": "screen and (max-width: 375px)",
+  "sp_320px": "screen and (max-width: 320px)",
+) !default;
+
+
+@mixin mq($breakpoint: pc) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
